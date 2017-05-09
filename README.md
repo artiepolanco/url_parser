@@ -4,7 +4,7 @@
 
 ### Description
 
-This project is a URL PARSER that will parse any URL given without using the URI module. The file **url_parser_uri** actually uses the URI module. It was created as my third wyncode project.
+This project is a URL PARSER that will parse any URL given. The **url_parser** file does not use the **URI Module**. The **url_parser_uri** file actually uses the URI module. It was created as my third wyncode project.
 
 ### Installation 
 
@@ -12,7 +12,7 @@ To install just download the the **url_parser.rb** file and run from your termin
 
 You can download this gem here : https://rubygems.org/gems/uri-query_params
 
-or you can install from Terminal using:
+or you can install the from your Terminal using:
 
 ```bash
 
