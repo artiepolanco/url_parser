@@ -12,7 +12,7 @@ To install just download the the **url_parser.rb** file and run from your termin
 
 You can download this gem here : https://rubygems.org/gems/uri-query_params
 
-or you can install the from your Terminal using:
+or you can install the gem from your Terminal using:
 
 ```bash
 
@@ -30,4 +30,4 @@ t = UrlParser.new "https://calendar.google.com/calendar/render?mode=day&date=201
 
 ```
 
-Then save the file and run the the file in the Terminal. _Viola_! Your URL is now parsed.
+Save the file and run again from the Terminal. _Viola_! Your URL is now parsed.
