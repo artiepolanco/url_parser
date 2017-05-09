@@ -22,7 +22,7 @@ gem install uri-query_params
 
 ### Usage
 
-Upon installation and download of file. Replace the URL already in the file with the URL you would like to parse:
+Upon installation and download of file. Open your favorite IDE and replace the URL already in the file with the URL you would like to parse:
 
 ```ruby
 
