@@ -1,0 +1,5 @@
+### This is an updated README file to satisfy the homework requirements for Week 3.
+
+Artie's url_parser is a TDD program that develops the code to meet the established test requirements to parse a url without using the uri module.
+
+Great job, Artie!
