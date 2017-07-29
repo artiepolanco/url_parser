@@ -26,15 +26,8 @@ class UrlParser
   end
 
   def query_string
-    url_split = @url.split("?")[-1].split("#")[0].split(/\W+/)
-    hash = {}
-    if url_split[3] == nil
-      hash[url_split[0]] = url_split[1]
-    else
-      hash[url_split[0]] = url_split[1]
-      hash[url_split[2]] = url_split[3]
-    end
-    hash
+    key_value_pairs = @url.split("?").last.scan(/\w+/)[0..-3] || nil
+    Hash[*key_value_pairs]
   end
 
   def fragment_id
