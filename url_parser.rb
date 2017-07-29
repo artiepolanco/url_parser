@@ -6,11 +6,7 @@ class UrlParser
 
   def scheme
     url_s = @url.split(/\W+/)
-    if url_s[0].include? "http"
-      url_s[0]
-    else
-      nil
-    end
+    (url_s[0].include? "http") ? url_s[0] : nil
   end
 
   def domain
@@ -20,24 +16,13 @@ class UrlParser
   def port
     url_split_for_port = @url.split(":")[-1].split("/")[0] || 80
     url_split = @url.split(/\W+/)
-    if url_split_for_port == ""
-      if url_split[0].include? "https"
-        "443"
-      else
-        "80"
-      end
-    else
-      url_split_for_port
-    end
+    return url_split_for_port unless url_split_for_port.empty?
+    url_split[0].include?("https") ? "443" : "80"
   end
 
   def path
     url_s = @url.split("/")[-1].split(/\W+/)[0]
-    if url_s == ""
-      nil
-    else
-      url_s
-    end
+    (url_s == "") ? nil : url_s
   end
 
   def query_string
@@ -56,12 +41,3 @@ class UrlParser
     @url.split("#")[-1]
   end
 end
-
-
-
-# t = UrlParser.new ("https://calendar.google.com/calendar/render?mode=day&date=20170424T185803&pli=1#main_7%7Cday-1+24230+24230+24230")
-# p t.scheme
-# p t.domain
-# p t.port
-# p t.path
-# p t.query_string
