@@ -20,11 +20,7 @@ class UrlParser
   end
 
   def path
-    if @uri.path.delete("/") == ""
-      nil
-    else
-      @uri.path.delete("/")
-    end
+    @uri.path.delete("/") == "" ? nil : @uri.path.delete("/")
   end
 
   def query_string
