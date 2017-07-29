@@ -1,6 +1,6 @@
 class UrlParser
 
-  def initialize (url)
+  def initialize(url)
     @url = url
   end
 
